@@ -38,7 +38,7 @@ const Header = () => {
         {/* Banner as part of card */}
         <div className="w-full h-32 md:h-44 bg-gradient-to-r from-blue-700 to-blue-400 relative">
           <img
-            src="/profile.jpg"
+            src="/Profile.jpg"
             alt="Profile"
             className="absolute left-6 md:left-10 -bottom-12 md:-bottom-16 w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg object-cover object-[center_10%] bg-white"
           />
