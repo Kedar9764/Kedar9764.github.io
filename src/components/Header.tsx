@@ -44,12 +44,16 @@ const Header = () => {
           />
         </div>
         {/* Card content below banner */}
-        <div className="pt-16 md:pt-20 pb-6 px-6 md:px-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div className="pt-16 md:pt-20 pb-6 px-6 md:px-8 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div>
             <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-2">Kedar Khotkar
               <span className="inline-block align-middle ml-1"><svg xmlns='http://www.w3.org/2000/svg' className='inline w-5 h-5 text-blue-600' fill='currentColor' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' fill='none' stroke='currentColor' strokeWidth='2'/><path d='M9 12l2 2 4-4' stroke='currentColor' strokeWidth='2' fill='none'/></svg></span>
             </div>
             <div className="text-md md:text-lg text-gray-700 dark:text-gray-200 font-medium">Senior Software Developer</div>
+            <div className="text-sm md:text-base text-gray-900 dark:text-white font-semibold mt-1">
+              4+ years experience&nbsp;|&nbsp;React, Node, TypeScript<br />
+              <span className="block mt-1">Certified by Meta &amp; GitHub Copilot</span>
+            </div>
             <div className="text-sm md:text-base text-gray-500 dark:text-gray-400 mt-1"> Bangalore, Karnataka, India
               {/* Bangalore, Karnataka, India · <a href="#contact" className="text-blue-600 hover:underline">+91 9921901848</a> */}
             </div>
@@ -62,15 +66,7 @@ const Header = () => {
             </div> */}
           </div>
           <div className="flex flex-col gap-3 items-start md:items-end mt-4 md:mt-0">
-            {/* <div className="flex items-center gap-2">
-              <img src="/logo512.png" alt="Accenture" className="w-8 h-8 rounded" />
-              <span className="text-gray-700 dark:text-gray-200 text-sm font-medium">Accenture</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src="/logo192.png" alt="Shivaji University" className="w-8 h-8 rounded" />
-              <span className="text-gray-700 dark:text-gray-200 text-sm font-medium">LTIMindtree</span>
-            </div> */}
-              {/* Tech stack icons */}
+
               <div className="flex flex-row gap-3 mt-2 w-full justify-start md:justify-end">
                 <img src="/techIcons/React.svg" alt="ReactJS" title="ReactJS" className="w-9 h-9" />
                 <img src="/techIcons/Node.js.svg" alt="NodeJS" title="NodeJS" className="w-9 h-9" />
@@ -79,11 +75,8 @@ const Header = () => {
                 <span className="dark:invert">
                   <img src="/techIcons/AWS.svg" alt="AWS" title="AWS" className="w-9 h-9" />
                 </span>
-                {/* <span className="dark:invert">
-                  <img src="/techIcons/github-copilot.png" alt="Copilot" title="AWS" className="w-9 h-9" />
-                </span> */}
               </div>
-            </div>
+          </div>
         </div>
       </div>
     </header>
