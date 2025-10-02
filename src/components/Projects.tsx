@@ -7,7 +7,7 @@ const projects = [
       { name: "React.js", icon: "/techIcons/React.svg" },
       { name: "Node.js", icon: "/techIcons/Node.js.svg" },
       { name: "Postman", icon: "/techIcons/Postman.svg" },
-      { name: "Azure", icon: "/techIcons/Azure DevOps.svg" }
+      { name: "Azure", icon: "/techIcons/Azure.svg" }
     ],
     responsibilities: [
       "Implemented initial code setup with suitable design pattern and architecture single-handedly.",
@@ -21,7 +21,7 @@ const projects = [
       { name: "React.js", icon: "/techIcons/React.svg" },
       { name: "Node.js", icon: "/techIcons/Node.js.svg" },
       { name: "Postman", icon: "/techIcons/Postman.svg" },
-      { name: "Azure", icon: "/techIcons/Azure DevOps.svg" },
+      { name: "Azure", icon: "/techIcons/Azure.svg" },
       { name: "Tailwind", icon: "/techIcons/Tailwind CSS.svg" },
       { name: "Post CSS", icon: "/techIcons/PostCSS.svg" }
     ],
@@ -37,7 +37,7 @@ const projects = [
       { name: "React.js", icon: "/techIcons/React.svg" },
       { name: "Node.js", icon: "/techIcons/Node.js.svg" },
       { name: "Postman", icon: "/techIcons/Postman.svg" },
-      { name: "Azure", icon: "/techIcons/Azure DevOps.svg" },
+      { name: "Azure", icon: "/techIcons/Azure.svg" },
       { name: "Tailwind", icon: "/techIcons/Tailwind CSS.svg" },
       { name: "Post CSS", icon: "/techIcons/PostCSS.svg" }
     ],
@@ -52,7 +52,7 @@ const projects = [
       { name: "React.js", icon: "/techIcons/React.svg" },
       { name: "Node.js", icon: "/techIcons/Node.js.svg" },
       { name: "Postman", icon: "/techIcons/Postman.svg" },
-      { name: "Azure", icon: "/techIcons/Azure DevOps.svg" }
+      { name: "Azure", icon: "/techIcons/Azure.svg" }
     ],
     responsibilities: [
       "Improved coding standard in project which impacted performance by 50%.",
