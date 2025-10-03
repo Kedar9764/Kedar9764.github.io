@@ -141,7 +141,7 @@ const Journey = () => {
           {/* Timeline vertical line container */}
           <div 
             ref={timelineRef}
-            className="absolute left-24 top-0 w-2 flex justify-center"
+            className="absolute left-4 md:left-24 top-0 w-2 flex justify-center"
             style={{ 
               height: cardMiddlePositions.length > 0 
                 ? `${cardMiddlePositions[cardMiddlePositions.length - 1] - cardMiddlePositions[0]}px` 
@@ -191,7 +191,7 @@ const Journey = () => {
           </div>
 
           {/* Journey cards */}
-          <div className="ml-32 space-y-8">
+          <div className="ml-12 md:ml-32 space-y-8">
             {journeySteps.map((step, idx) => {
               const isCardVisible = visibleCards.includes(idx);
               const isPeriodVisible = visiblePeriods.includes(idx);
@@ -202,10 +202,10 @@ const Journey = () => {
                   ref={(el) => { cardRefs.current[idx] = el; }}
                   className="relative"
                 >
-                  {/* Period badge positioned to the left */}
-                  <div className="absolute -left-40 top-0 w-28 text-right flex items-center justify-end h-full">
+                  {/* Period badge - responsive positioning */}
+                  <div className="absolute -left-16 md:-left-40 top-2 md:top-0 w-12 md:w-28 text-right flex items-start md:items-center justify-end md:h-full">
                     <span 
-                      className={`text-blue-600 dark:text-blue-400 font-semibold text-sm whitespace-nowrap transition-all duration-500 ${
+                      className={`text-blue-600 dark:text-blue-400 font-semibold text-xs md:text-sm whitespace-nowrap transition-all duration-500 ${
                         isPeriodVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
                       }`}
                     >
@@ -215,55 +215,55 @@ const Journey = () => {
 
                   {/* Card */}
                   <div 
-                    className={`bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-700 ${
+                    className={`bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 md:p-6 hover:shadow-lg transition-all duration-700 ${
                       isCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                     }`}
-                    >
-                      <div className="flex flex-col gap-2">
-                        {/* Title row with logo aligned right */}
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            {step.title}
-                          </h3>
-                          {(step.org.includes('Accenture') || step.org.includes('LTIMindtree')) && (
-                            step.org.includes('Accenture') ? (
-                              <img
-                                src="/accenture.png"
-                                alt="Accenture"
-                                className="w-10 h-10 object-contain ml-4"
-                              />
-                            ) : step.org.includes('LTIMindtree') ? (
-                              <img
-                                src="/lt.png"
-                                alt="LTIMindtree"
-                                className="w-10 h-10 object-contain ml-4 invert dark:invert-0"
-                              />
-                            ) : null
-                          )}
-                        </div>
-                        {/* Full period below title */}
-                        <span className="text-xs text-gray-500 dark:text-gray-400 font-mono mb-1">{step.fullPeriod}</span>
-                        <p className="text-sm text-gray-600 dark:text-gray-300">
-                          {step.org}
-                        </p>
-                        {step.project && (
-                          <p className="text-xs text-blue-500 dark:text-blue-400 font-medium mt-1">
-                            {step.project}
-                          </p>
+                  >
+                    <div className="flex flex-col gap-2">
+                      {/* Title row with logo aligned right */}
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-white leading-tight">
+                          {step.title}
+                        </h3>
+                        {(step.org.includes('Accenture') || step.org.includes('LTIMindtree')) && (
+                          step.org.includes('Accenture') ? (
+                            <img
+                              src="/accenture.png"
+                              alt="Accenture"
+                              className="w-8 h-8 md:w-10 md:h-10 object-contain flex-shrink-0"
+                            />
+                          ) : step.org.includes('LTIMindtree') ? (
+                            <img
+                              src="/lt.png"
+                              alt="LTIMindtree"
+                              className="w-8 h-8 md:w-10 md:h-10 object-contain flex-shrink-0 invert dark:invert-0"
+                            />
+                          ) : null
                         )}
-                        <ul className="mt-3 space-y-2">
-                          {step.details.map((detail, i) => (
-                            <li
-                              key={i}
-                              className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2"
-                            >
-                              <span className="inline-block w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 mt-1.5 flex-shrink-0" />
-                              <span>{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
                       </div>
+                      {/* Full period below title */}
+                      <span className="text-xs text-gray-500 dark:text-gray-400 font-mono">{step.fullPeriod}</span>
+                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
+                        {step.org}
+                      </p>
+                      {step.project && (
+                        <p className="text-xs text-blue-500 dark:text-blue-400 font-medium mt-1">
+                          {step.project}
+                        </p>
+                      )}
+                      <ul className="mt-2 md:mt-3 space-y-1.5 md:space-y-2">
+                        {step.details.map((detail, i) => (
+                          <li
+                            key={i}
+                            className="text-xs md:text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2"
+                          >
+                            <span className="inline-block w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 mt-1.5 flex-shrink-0" />
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
+                  </div>
                 </div>
               );
             })}

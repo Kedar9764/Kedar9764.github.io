@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Journey from './components/Journey';
+import Journey2 from './components/Journey2';
 import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
@@ -19,7 +20,7 @@ function App() {
         <main className="w-full md:w-3/5 lg:w-2/3 px-4">
           <Header />
           {/* <Skills /> */}
-          <Journey />
+          <Journey2 />
           {/* <Experience /> */}
           <Projects />
         </main>
